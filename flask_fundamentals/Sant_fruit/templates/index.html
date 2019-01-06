@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Sant Fruit Store</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <style>
+        .info{
+        width: 125px;
+        height: 300px;
+        border: 2px solid black;
+        vertical-align: top;
+        display: inline-block;
+        background-color: blueviolet;
+
+    }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar navbar-dark bg-dark box-shadow">
+            <div class="container d-flex justify-content-between">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                        <circle cx="12" cy="13" r="4"></circle>
+                    </svg>
+                    <h1>Sant Fruit Store</h1>
+                </a>
+
+            </div>
+        </div>
+    </header>
+
+    <main role="main">
+
+        <div>
+
+        </div>
+
+        <div class="album py-5 bg-light">
+            <div class="container">
+
+                <form action='/checkout' method='post'>
+                    <h4 class="mb-3" id='buy'>What would you like to buy?</h4>
+                    <table class="Quantity">
+                        <thead>
+                            <tr>
+                                <th>Fruit Name</th>
+                                <th>Quantity</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Strawberry</td>
+                                <td>
+                                    <select name='strawberry'>
+                                        <option value='0'>0</option>
+                                        <option value='1'>1</option>
+                                        <option value='2'>2</option>
+                                        <option value='3'>3</option>
+                                        <option value='4'>4</option>
+                                    </select>
+                                </td>
+                                <td>Strawberry</td>
+                                <td>
+                                    <select name='strawberry'>
+                                        <option value='0'>0</option>
+                                        <option value='1'>1</option>
+                                        <option value='2'>2</option>
+                                        <option value='3'>3</option>
+                                        <option value='4'>4</option>
+                                    </select>
+                                </td>
+                                <td>blueberry</td>
+                                <td>
+                                    <select name='strawberry'>
+                                        <option value='0'>0</option>
+                                        <option value='1'>1</option>
+                                        <option value='2'>2</option>
+                                        <option value='3'>3</option>
+                                        <option value='4'>4</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+
+                    <h4 class="mb-3" id='info'>Your Information</h4>
+                    <div>
+
+                        <div class=>
+                            <label for="fullName">FullName</label>
+                            <input type="text" name="fullName" placeholder="" value="">
+                        </div>
+                        <div class=>
+                            <label for="Student_id">Student Id</label>
+                            <input type="text" name="student_id" placeholder="" value="">
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" type="submit">buy me stuff</button>
+                </form>
+                <div class="info">
+                    <p> Welcome to Sant Fruit Store</p>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

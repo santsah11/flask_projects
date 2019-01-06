@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename ='styles.css') }}">
+    <title>Spice</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="card">
+                <div class="row">
+                    <div class="col">
+                        <div class="card-body">
+                            <a href="/"><img src="{{ url_for('static', filename ='logo_nepal.png') }}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col">
+                    </div>
+                    <div class="col">
+                        <P><a href="/sign"> Sign in</a> or<a href="/creataccount"> Create an Account</a> <a href="/cart"
+                                class="header-cart-btn cart-toggle">
+                                <img src="{{ url_for('static', filename ='basket.png') }}" alt="" height="50" width="50">
+                                Cart <span id="cartCount" class="hidden-count">0</span>
+                            </a> </P>
+                        <form action="/search" method="get" class="search-bar" role="search">
+                            <input type="hidden" name="type" value="product">
+                            <input type="search" name="q" value="" placeholder="Search all products..." aria-label="Search all products...">
+                            <button type="submit" class="search-bar--submit icon-fallback-text">
+                                <span>Search</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="row">
+            <div class="col-sm">
+                <h1 class="nep"> Nepali Spice From Himalays</h1>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-10">
+                <div class="spice">
+                    <div class="row">
+                        <div class="col-sm">
+                            <a href="#"> <img src="/static/century-chicken.jpg" alt="" height="250" width="200"></a>
+                        </div>
+                        <div class="col-sm">
+                            <a href="#"> <img src="/static/century-chowmein.jpg" alt="" height="250" width="200"></a>
+                        </div>
+                        <div class="col-sm">
+                            <a href="#"> <img src="/static/century-chowmein.jpg" alt="" height="250" width="200"></a>
+                        </div>
+                        <div class="col-sm">
+                            <a href="#"> <img src="/static/century-chowmein.jpg" alt="" height="250" width="200"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="card">
+            <div class="row">
+                <div class="col-sm">
+                    <h1> Quick Links</h1>
+                    <ul>
+                        <li> Search</li>
+                        <li>Offers and discount</li>
+                        <li> Shipping Rates</li>
+                        <li> Returs and refunds</li>
+                        <li> About Sant Bazzar</li>
+                    </ul>
+
+                </div>
+                <div class="col-sm">
+                    <h1> Get In touch</h1>
+                    <p> Email : santsah@gmail.com</p>
+                    <p> call or text:11111111 </p>
+                    <div class="row">
+                        <div class="col-sm">
+                            <img src="/static/twitter.png" height="25" width="25" alt="">
+                        </div>
+                        <div class="col-sm">
+                            <img src="/static/download.png" height="25" width="25" alt="">
+                        </div>
+                        <div class="col-sm">
+                            <img src="/static/search.png" height="25" width="25" alt="">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <h1> News letter</h1>
+                        <p><input type="text" name="email" id=""> <input type="submit" value="Sign up"></p>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+
+</html>

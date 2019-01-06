@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>The Wall</h1>
+    <p>{{the_user['first_name']}}</p>
+    <a href="/logout">logout</a>
+
+    <div id="left" class="box">
+        <h3>{{my_messages |length}} just for you {{the_user['first_name']}}</h3>
+       
+        {% for message in my_messages %}
+        <div>
+            <p>{{message['first_name']}} said {{message['created_at']}}</p>
+            <p>{{message['message']}}</p>
+            <a href="/delete/{{message['id']}}">Delete</a>
+        </div>
+        {% endfor %}
+
+    </div>
+    <div id="right" class="box">
+            <h3>Send Messages</h3>
+            <p>You have sent total count {{count_sent}}</p>
+            {%for users in others%}
+            <div>
+                <p>{{users['first_name']}}</p>
+                    <form action="/message/{{users['id']}}" method="POST">
+                    <textarea name="message" id="" cols="60" rows="3"></textarea>
+                    <input type="submit" value="sendMessage">
+                    </form>
+                </div>
+                {% endfor%}
+    </div>
+
+   
+    
+</body>
+</html>

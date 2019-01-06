@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <title>Travel Dashboard</title>
+</head>
+
+<body>
+  <div>
+
+    <h1> welcome {{session['user_name']}}</h1>
+    <a href="/addtrip">Addtrip</a>
+    <a href="/logout">Logout</a>
+  </div>
+
+  <h1>Your trip Schedules</h1>
+  <div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Destination</th>
+          <th scope="col">travel_start</th>
+          <th scope="col">travel_end</th>
+          <th scope="col">plan</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+
+      {% for created_trips in created_trips %}
+      <tbody>
+        <tr>
+          <td><a href="/view/{{created_trips['id']}}">{{created_trips['destination']}}</a></td>
+          <td>{{created_trips['travel_start']}} </td>
+          <td> {{created_trips['travel_end']}}</td>
+          <td>{{created_trips['plan']}}</td>
+          <td><a href="/delete/{{created_trips['id']}}">delete</a>
+          </td>
+        </tr>
+        {% endfor %}
+        {% for joined_trips in joined_trips %}
+        </tr>
+        <td><a href="/view/{{joined_trips['id']}}">{{joined_trips['destination']}}</a></td>
+        <td>{{joined_trips['travel_start']}} </td>
+        <td> {{joined_trips['travel_end']}}</td>
+        <td>{{joined_trips['plan']}}</td>
+        <td><a href="/cancel/{{joined_trips['id']}}">cancel</a>
+        </td>
+        </tr>
+        {%endfor%}
+      </tbody>
+
+    </table>
+  </div>
+  <div>
+    <h1> Other User's Travel plans</h1>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Destination</th>
+          <th scope="col">travel_start</th>
+          <th scope="col">travel_end</th>
+          <th scope="col">Do_you_want_join?</th>
+        </tr>
+      </thead>
+      <tbody>
+        {%for other_users in other_users%}
+        <tr>
+          <td><a href="/view/{{other_users['id']}}">{{other_users['destination']}}</a></td>
+          <td>{{other_users['travel_start']}}</td>
+          <td> {{other_users['travel_end']}}</td>
+          <td><a href="/join/{{other_users['id']}}">join</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+
+    </table>
+  </div>
+</body>
+
+</html>

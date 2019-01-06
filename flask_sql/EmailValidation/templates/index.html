@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Email Validation</title>
+</head>
+
+<body>
+        {% with Iserror = get_flashed_messages() %}
+        {% if Iserror %}
+            {% for msg in Iserror %}
+                <p class="Iserror">{{ msg }}</p>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+       
+    <h1>Validating the emails</h1>
+    <form action="/process" method="POST">
+    <p>Email Adress 
+        <input type="text" name="email" placeholder="check your email"></p>
+    <input type="submit" name="submit_button">
+    </form>
+</body>
+</html>

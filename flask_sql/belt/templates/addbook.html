@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Book and Review</title>
+</head>
+<body>
+    <h1>Add a new book title and a review</h1>
+    <form action="/addbook" method="POST">
+        <p> Book title <input type="text" name="booktitle"></p>
+        <p> Choose from list <select name="" id="">
+            <option value="Mark"> Mark</option>
+            <option value="jeremy"> Jeremy</option>
+            <option value="Pat">Patric</option>
+        </select></p>
+        <p> or add an new author <input type="text" name="newauthor"></p>
+       <p> Review <input type="text" name="review"></p>
+       <p> Rating <input type="number" step="1"> starts</p>
+       <input type="submit" value="Add Book And Review">
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div> <h1>welcome, {{session['name']}}!    <a href="/AddBookandreview"> Add Book and Review</a> <a href=" logout">Logout</a>   </h1> 
+    </div>
+    <div>
+        
+        <h2>Recent Book Reviews</h2>
+        <p>{{book_name['title']}}</p>
+        <p>{{review['rating']}}</p>
+        <P>{{review['content']}}</P>
+    </div>
+    <div>
+        
+            <h2>Recent Book Reviews</h2>
+            <h3><u>{{book_name['title']}} </u></h3>
+            <p>{{review['rating']}}</p>
+            <P> {{user['fullname']}} says:  {{review['content']}}</P>
+        </div>
+
+    <div>   
+        <h2>Other books Reviews:</h2>
+        <iframe src="/default.asp" width="200" height="200" scrolling="yes">
+        <p>Your browser does not support iframes.</p>
+        </iframe>
+        <iframe src="" frameborder="0"></iframe>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+.regis{
+    display: inline-block;
+    width: 350px;
+    height: 425px;
+    border: 2 solid black;
+    vertical-align: top;
+    background-color: aqua;
+}
+.login{
+    display: inline-block;
+    width: 350px;
+    height: 350px;
+    border: 2 solid black;
+    vertical-align: top;
+    background-color: beige;
+}

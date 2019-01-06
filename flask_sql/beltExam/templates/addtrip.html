@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Trip</title>
+</head>
+<body>
+    <h1>Add Destination</h1>
+    {% with error = get_flashed_messages() %}
+    {% if error %}
+        {% for msg in error %}
+            <p class="error">{{ msg }}</p>
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <h3><a href="/back">Back</a></h3>
+    <h3><a href="/logout">Logout</a></h3>
+    <div>
+        <form action="/process" method="POST">
+            <p>Destination <input type="text" name="des"></p>
+            <p>Description  <input type="text" name="descrip"></p>
+            <p>Travel Date From <input type="date" name="startDate" id=""></p>
+            <p>Travel Date to <input type="date" name="endDate" id=""></p>
+            <input type="submit" name="" id="">
+        </form>
+    </div>
+</body>
+</html>

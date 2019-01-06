@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+    <style>
+    .qoutebox{
+    height: 75px;
+    width: 200px;
+    border: 1px solid black;
+}
+    </style>
+</head>
+
+<body>
+   
+    <p><a href="/back">Back</a></p>
+    <button><a href="/logout">Logout</a></button>
+    <p> {{user_post[0]['first_name']}}'s Qoutes</p>
+    
+   
+    <div>
+       {% for user_post in user_post %}
+       <div class="qoutebox">
+        <p>{{user_post['quote']}}</p>
+        </div>
+        {% endfor%}
+    </div>
+  
+</body>
+
+</html>

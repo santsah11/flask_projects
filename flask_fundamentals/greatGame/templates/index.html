@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="">
+    <title>Great Game</title>
+</head>
+
+<body>
+   <div class="container">
+        
+    <h1 class="header"> Welcome to The great Number Game</h1>
+    <p class="header"> I am thinking of a number between 1 and 100</p>
+    <p class="header">Take a guess</p>
+
+    
+
+    <div class="bottom">
+            <p>{{guess}}</p>
+        <form action="/process", method="POST">
+            <input type="text" name="number"> <br>
+            <input type="submit">
+        </form>
+    </div>
+   </div>
+
+</body>
+
+</html>

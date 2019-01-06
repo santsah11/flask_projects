@@ -1,0 +1,8 @@
+.box{
+    display: inline-block;
+    width: 250px;
+    border: 3px solide black;
+    border-radius: 3PX;
+    background-color: blue;
+
+}

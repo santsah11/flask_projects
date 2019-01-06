@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>View trips</title>
+</head>
+<body>
+   
+    <p><h2><a href="/back">Back</a></h2></p>
+    <p><h2><a href="/logout">Logout</a></h2></p>
+    {{viewresult}}
+  
+    <h1> Destination :{{viewresult['destination']}}</h1> 
+    <p> Planned By:{{viewresult['first_name']}}</p>
+    <p> Description :{{viewresult['plan']}}</p>
+    <p> Travel date From{{viewresult['travel_start']}}</p>
+    <p> Travel date End{{viewresult['travel_end']}}</p>
+
+    <h3>Other User joining the trips</h3>
+    {% for other_joining in other_joining %}
+    <p>Name : {{other_joining['first_name']}}</p>
+    {% endfor %}
+</body>
+</html>

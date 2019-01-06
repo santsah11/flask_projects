@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles.css')}}">
+    <style>
+    .leftbox{
+    display: inline-block;
+    width: 350px;
+    height: 350px;
+    border: 2 solid black;
+    vertical-align: top;
+    background-color: beige;
+}
+.rightbox{
+    display: inline-block;
+    width: 450px;
+    height: 750px;
+    border: 2 solid black;
+    vertical-align: top;
+    background-color: aqua;
+}
+.qoutebox{
+    height: 75px;
+    width: 200px;
+    border: 1px solid black;
+}
+    </style>
+    <title>quote Dashboard</title>
+</head>
+<body>
+    <div class="rightbox">
+        <h3> welcome {{session['user_name']}}</h3>
+        {% with error = get_flashed_messages() %}
+        {% if error %}
+            {% for msg in error %}
+                <p class="error">{{ msg }}</p>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+      
+        <h1>Quotes</h1>
+        {% for posted_by in posted_by %}
+        
+            <p>{{posted_by['quote']}}</p>
+            <p> posted by: <a href="/user/{{posted_by['user_id']}}">{{posted_by['first_name']}}</a></p>
+            <p><a href="/delete/{{posted_by['id']}}">delete</a></p>
+        
+        {%endfor%}
+    </div>
+    <div class="leftbox">
+        <a href="/edit/{{session['user_id']}}">Edit my account </a>
+        <button><a href="/logout">Logout </a> </button>
+        
+        <p> Add Quote!</p>
+        <form action="/addqoute" method="POST">
+         <p> Author  <input type="text" name="author"></p>
+         <p>Quote <input type="text" name="qoute"></p>
+         <input type="submit">
+        </form>
+    </div>
+</body>
+</html>

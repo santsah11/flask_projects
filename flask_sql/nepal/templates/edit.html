@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename ='styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.js"></script>
+    <title>Product page</title>
+
+</head>
+
+<body>
+ <div class="container">
+        <h1>Edit Product Id {}/  add click then say add new product</h1>
+
+
+        <form action="/add" method="POST">
+          <div class="form-group">
+            <p>Name: <input type="text" class="form-control" id="formGroupExampleInput2" name="pname" placeholder="Product name"></p>
+          </div>
+          <div class="form-group">
+            <p>Price: <input type="text" class="form-control" id="formGroupExampleInput2" name="price" placeholder="Product price"></p>
+          </div>
+          <div class="form-group">
+            <p>Description: <input type="text" class="form-control" id="formGroupExampleInput2" name= "description" placeholder="Description"></p>
+          </div>
+          
+           <input type="submit" class="btn-primary" value="Add">
+        </form>
+
+ </div>
+</body>
+
+</html>

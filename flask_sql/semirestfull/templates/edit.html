@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Users</title>
+</head>
+<body>
+    {{user}}
+    <h1>Edit User:{{user['id']}} </h1>
+    <form action="/update/{{user['id']}}" method="POST">
+        <p> Full Name : <input type="text" name="name" id="" value="{{user['FullName']}}"></p>
+        <p> Email:<input type="text" name="email" id="" value="{{user['Email']}}"></p>
+        <p><input type="submit" name="" id="" value="Update"></p>
+    </form>
+
+    <a href="/show/{{user['id']}}">show</a>
+    <a href="/"> Go Back</a>
+</body>
+</html>

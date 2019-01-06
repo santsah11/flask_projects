@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello</title>
+    <style>
+     
+        h1 {
+            color: maroon;
+            text-align: center;
+
+        }
+
+        #box1{
+            width: 200px; height: 200px;
+            border: 2px solid black;
+            display: inline-block;
+            /* margin-left: 400px; */
+            vertical-align:top;
+            /* padding-right: 100px; */
+             background-color:{{greeny}};
+            }
+        </style>
+</head>
+
+<body>
+
+        <h1>Welcome !</h1>
+
+        {% for x in range(0,times): %}
+        <div id="box1"></div>
+
+        {% endfor %}
+   
+</body>
+
+</html>

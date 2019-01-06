@@ -1,0 +1,14 @@
+#left_box{
+width: 400px;
+height: 350px;
+border: 2px solid black;
+vertical-align: top;
+display: inline-block;
+}
+#right_box{
+    width: 400px;
+    height: 350px;
+    border: 2px solid black;
+    vertical-align: top;
+    display: inline-block;
+    }

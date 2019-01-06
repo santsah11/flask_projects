@@ -1,0 +1,9 @@
+.regis{
+    display: inline-block;
+    vertical-align: top;
+}
+.login{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 125px;
+}

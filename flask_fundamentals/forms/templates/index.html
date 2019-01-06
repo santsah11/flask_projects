@@ -1,0 +1,21 @@
+<html>
+    <head>
+
+       <title>Form Test Index</title>
+       <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+       <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"> -->
+       <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+        <!-- <script type="text/javascript" src="{{ url_for('static', filename='my_script.js') }}"></script> -->
+    </head>
+    <body>
+      
+      <h3 class="header">Create a User <img src="{{url_for('static',filename='ninja.png')}}" alt="no find" height="100" width="100"></h3>
+      
+      <form class="form-inline" action='/users' method='post'>
+          Name: <input  type='text' name='fullname'>
+          Email: <input  type='text' name='email'>
+          password: <input type="text" name="password" id="">
+          <input type='submit' value='create user'>
+      </form>
+    </body>
+</html>

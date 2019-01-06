@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Semi-Restfull-users</title>
+</head>
+<body>
+    <h1>Hello Semi Users</h1>
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="id">ID</th>
+            <th scope="fullname">Fullname</th>
+            <th scope="email">Email</th>
+            <th scope="created_at">Created_at</th>
+            <th scope="actions">Actions
+            
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for users in allusers %}
+          <tr>
+            <td>{{users['id']}}</td>
+            <td>{{users['FullName']}}</td>
+            <td>{{users['Email']}}</td>
+            <td>{{users['Created_at']}}</td> 
+            <td><a href="/show/{{users['id']}}">  show </a> <a href="/edit/{{users['id']}}">  edit </a> <a href="/delete/{{users['id']}}">   delete </a></td>
+          </tr>
+          {% endfor%}
+     
+        </tbody>
+        
+      </table>
+      <a href="/addnewuser"> <u> Add a new user</u></a>
+    
+</body>
+</html>

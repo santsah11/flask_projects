@@ -1,0 +1,18 @@
+<input type="text" name="your_Name" value="Enter name">
+
+
+def __init__(self, db):
+    connection = pymysql.connect(host='localhost',
+                                 user='root',
+                                 password='root',
+                                 db=db,
+                                 charset='utf8mb4',
+                                 cursorclass=pymysql.cursors.DictCursor,
+                                 autocommit = True)
+    self.connection = connection
+
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+
+
+you need to put the root user name and Password
+fix: Supply the correct password to pymysql.connect()

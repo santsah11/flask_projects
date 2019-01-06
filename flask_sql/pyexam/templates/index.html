@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles.css')}}">
+    <title>Quote Dashborad</title>
+</head>
+
+<body>
+<h1> jai ma</h1>
+   <h1>Login and Registration!</h1>
+  {% with error = get_flashed_messages() %}
+  {% if error %}
+      {% for msg in error %}
+          <p class="error">{{ msg }}</p>
+      {% endfor %}
+  {% endif %}
+  {% endwith %}
+  
+ <div class="regis">
+    <h3> Registration Here </h3>
+     <form action="/register" method="POST">
+        <p> First Name</p>
+        <input type="text" name="fname" value="" placeholder="">
+        <p> Last Name</p>
+        <input type="text" name="lname" value="" placeholder="">
+        <p>Email</p>
+        <input type="text" name="email" value="" placeholder="">
+        <p>Password</p>
+        <input type="text" name="password" value="" placeholder="">
+        <p>Conform Password</p>
+        <input type="text" name="c_password" value="" placeholder="">
+        <input type="submit" name="register" value="Register">
+    </form>
+    </div>
+    
+ <div class="login">
+     <h3> Login Here </h3>
+     <form action="/login" method="POST">
+        <p>Email</p>
+        <input type="text" name="email" value="" placeholder="">
+        <p>Password</p>
+        <input type="text" name="password" value="" placeholder="">
+        <input type="submit" value="login">
+    </form>
+
+ </div>
+
+
+</body>
+</html>
